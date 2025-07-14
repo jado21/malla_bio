@@ -1,0 +1,135 @@
+/* Estilos Generales y Paleta de Colores Verde */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F8F0; /* Verde Menta muy pálido (fondo) */
+    color: #2E4034; /* Verde oscuro para texto */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #004D40; /* Verde Bosque Oscuro */
+    font-weight: 600;
+}
+
+header p, footer p {
+    color: #388E3C; /* Verde Medio */
+    font-size: 1.1em;
+}
+
+/* Contenedor Principal de la Malla */
+#malla-curricular-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    overflow-x: auto; /* Permite scroll horizontal si no cabe */
+}
+
+/* Estilo de cada Ciclo (Columna) */
+.ciclo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 180px;
+    background-color: #E8F5E9; /* Verde Salvia claro */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ciclo-header {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #1B5E20; /* Verde Oscuro */
+    border-bottom: 2px solid #A5D6A7; /* Verde pálido */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de cada Curso (Tarjeta) */
+.curso {
+    background-color: #FFFFFF;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #C8E6C9; /* Borde verde pálido */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+    position: relative;
+    opacity: 0.5; /* Opacidad para cursos bloqueados */
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(46, 125, 50, 0.1);
+}
+
+.curso-nombre {
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #2E7D32; /* Verde oscuro */
+}
+
+.curso-codigo {
+    font-size: 0.75em;
+    color: #555; /* Gris */
+    margin-top: 5px;
+}
+
+/* Estados de los Cursos */
+
+/* Curso Disponible para ser aprobado */
+.curso.disponible {
+    opacity: 1;
+    border-left: 5px solid #69F0AE; /* Verde menta brillante para indicar disponibilidad */
+}
+
+/* Curso Aprobado */
+.curso.aprobado {
+    opacity: 1;
+    background-color: #E3F2FD; /* Un azul claro para contraste */
+    border-left: 5px solid #00C853; /* Verde brillante para indicar aprobación */
+    color: #333;
+}
+
+.curso.aprobado .curso-nombre {
+    color: #004D40;
+    text-decoration: line-through;
+}
+
+/* Tooltip para mostrar prerrequisitos */
+.tooltip {
+    visibility: hidden;
+    width: 160px;
+    background-color: #2E4034; /* Verde oscuro */
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8em;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2E4034 transparent transparent transparent;
+}
+
+.curso:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
