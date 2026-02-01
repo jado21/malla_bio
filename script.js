@@ -34,34 +34,35 @@ document.addEventListener('DOMContentLoaded', function() {
         { ciclo: 5, codigo: 'CBC24010', nombre: 'Bioética y deontología', prerequisitos: [] },
         { ciclo: 5, codigo: 'CBC24011', nombre: 'Evolución', prerequisitos: ['CBC24006', 'CBC24007'] },
         { ciclo: 5, codigo: 'CBC24012', nombre: 'Fisiología general', prerequisitos: ['B24001'] },
-        { ciclo: 5, codigo: 'BOT24001', nombre: 'Ficología', prerequisitos: ['CBC24007'] },
+        { ciclo: 5, codigo: 'HYP24001', nombre: 'Hidrobiologia', prerequisitos: ['CBC24008'] },
+        { ciclo: 5, codigo: 'HYP24002', nombre: 'Tecnicas de Campo en Hidrobiologia', prerequisitos: ['CBC24008'] },
         // Ciclo VI
         { ciclo: 6, codigo: 'CBC24013', nombre: 'Sistemática general', prerequisitos: ['CBC24011'] },
         { ciclo: 6, codigo: 'CBC24014', nombre: 'Bioinformática', prerequisitos: ['B24002'] },
         { ciclo: 6, codigo: 'CBC24015', nombre: 'Conservación de la biodiversidad', prerequisitos: ['CBC24009', 'CBC24011'] },
         { ciclo: 6, codigo: 'BOT24002', nombre: 'Gestión de recursos vegetales', prerequisitos: [] },
-        { ciclo: 6, codigo: 'BOT24003', nombre: 'Biogeografía general', prerequisitos: ['CBC24006', 'CBC24007'] },
-        { ciclo: 6, codigo: 'BOT24004', nombre: 'Hongos y líquenes', prerequisitos: ['CBC24007'] },
+
+        { ciclo: 6, codigo: 'HYP24003', nombre: 'Evaluacion de Impacto ambiental', prerequisitos: ['CBC24009'] },
+        { ciclo: 6, codigo: 'HYP24004', nombre: 'Biogeografia acuatica', prerequisitos: ['HYP24001'] },
         // Ciclo VII
-        { ciclo: 7, codigo: 'BOT24005', nombre: 'Gimnospermas', prerequisitos: ['CBC24007'] },
-        { ciclo: 7, codigo: 'BOT24006', nombre: 'Dicotiledóneas I', prerequisitos: ['CBC24007'] },
-        { ciclo: 7, codigo: 'BOT24007', nombre: 'Briófitos y pteridófitos', prerequisitos: ['CBC24007'] },
-        { ciclo: 7, codigo: 'BOT24008', nombre: 'Fisiología vegetal', prerequisitos: ['CBC24012'] },
-        { ciclo: 7, codigo: 'BOT24009', nombre: 'Anatomía e histogénesis', prerequisitos: ['CBC24007'] },
+        { ciclo: 7, codigo: 'HYP24005', nombre: 'Limnologia', prerequisitos: ['HYP24001'] },
+        { ciclo: 7, codigo: 'HYP24006', nombre: 'Invertebrados Acuaticos', prerequisitos: ['HYP24001'] },
+        { ciclo: 7, codigo: 'HYP24007', nombre: 'Biologia Pesquera', prerequisitos: ['HYP24001'] },
+        { ciclo: 7, codigo: 'HYP24008', nombre: 'Oceanografia', prerequisitos: ['HYP24001'] },
         // Ciclo VIII
-        { ciclo: 8, codigo: 'BOT24010', nombre: 'Dicotiledóneas II', prerequisitos: ['CBC24007'] },
-        { ciclo: 8, codigo: 'BOT24011', nombre: 'Monocotiledóneas', prerequisitos: ['CBC24007'] },
-        { ciclo: 8, codigo: 'BOT24012', nombre: 'Ecología de poblaciones', prerequisitos: ['CBC24009'] },
-        { ciclo: 8, codigo: 'BOT24013', nombre: 'Botánica económica', prerequisitos: ['CBC24007'] },
+        { ciclo: 8, codigo: 'HYP24009', nombre: 'Evaluacion de Recursos Pesqueros', prerequisitos: ['HYP24007'] },
+        { ciclo: 8, codigo: 'HYP24010', nombre: 'Artes y metodos de pesca', prerequisitos: ['HYP24007'] },
+        { ciclo: 8, codigo: 'HYP24011', nombre: 'Ictiologia', prerequisitos: ['HYP24001'] },
+        { ciclo: 8, codigo: 'HYP24012', nombre: 'Acuicultura general', prerequisitos: ['HYP24005','HYP24008'] },
+        { ciclo: 8, codigo: 'HYP24013', nombre: 'Gestion de proyectos en Hidrobiologia', prerequisitos: ['HYP24001'] },
         // Ciclo IX
-        { ciclo: 9, codigo: 'BOT24O14', nombre: 'Investigación en Botánica I', prerequisitos: [] }, // Prerrequisito: 150 créditos
-        { ciclo: 9, codigo: 'BOT24015', nombre: 'Bioestadística aplicada', prerequisitos: ['CBC24005'] },
-        { ciclo: 9, codigo: 'BOT24016', nombre: 'Etnobotánica', prerequisitos: ['CBC24007'] },
-        { ciclo: 9, codigo: 'BOT24017', nombre: 'Genética vegetal', prerequisitos: ['CBC24003'] },
-        { ciclo: 9, codigo: 'BOT24018', nombre: 'Fitogeografía', prerequisitos: ['CBC24007'] },
+        { ciclo: 9, codigo: 'HYP24014', nombre: 'Investigación en Hidrobiologia y Pesqueria I', prerequisitos: ['HYP24005','HYP24006','HYP24007','HYP24008'] }, // Prerrequisito: 150 créditos
+        { ciclo: 9, codigo: 'HYP24015', nombre: 'Ecologia marina', prerequisitos: ['HYP24008'] },
+        { ciclo: 9, codigo: 'HYP24016', nombre: 'Ordenacion y Gestion Pesquera', prerequisitos: ['HYP24007'] },
+        { ciclo: 9, codigo: 'HYP24017', nombre: 'Indices Bioticos', prerequisitos: ['HYP24001','CBC24009'] },
         // Ciclo X
-        { ciclo: 10, codigo: 'BOT24O20', nombre: 'Investigación en Botánica II', prerequisitos: ['BOT24O14'] },
-        { ciclo: 10, codigo: 'BOT24019', nombre: 'Prácticas Preprofesionales', prerequisitos: ['BOT24O14'] },
+        { ciclo: 10, codigo: 'HYP24018', nombre: 'Investigación en Hidrobiologia y Pesqueria I', prerequisitos: ['HYP24014'] },
+        { ciclo: 10, codigo: 'HYP24019', nombre: 'Prácticas Preprofesionales', prerequisitos: ['HYP24005','HYP24006','HYP24007','HYP24008'] },
     ];
 
     const container = document.getElementById('malla-curricular-container');
